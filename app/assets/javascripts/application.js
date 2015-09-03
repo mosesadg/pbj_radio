@@ -29,8 +29,8 @@ App = {
   Collections: {},
   Routers: {}
 };
-
-
 $(document).ready(function() {
-  
+  var songs = new App.Collections.Songs();
+  songs.fetch({reset:true});
+  var listView = new App.Views.SongList({collection: songs});
 });
